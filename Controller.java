@@ -6,7 +6,7 @@ public class Controller {
 	
 	//Instance variabler skal være private
 	
-	private static final int ExtraTurn = 10;
+	private static final int fieldNumber9 = 10;
 	private Dice die = new Dice();			// Laver et nyt objekt af klassen Dice
 	private int roll1 = 0;	 				// Laver to lokale variable, der indeholder to separate værdier
 	private int roll2 = 0;					// af die.roll();
@@ -67,7 +67,7 @@ public class Controller {
 		}
 		public void extraTurn()
 		{
-			if (diceEyes == ExtraTurn) 
+			if (diceEyes == fieldNumber9) 
 			{
 				currentPlayer--;
 			}
