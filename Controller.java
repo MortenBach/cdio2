@@ -6,6 +6,7 @@ public class Controller {
 	
 	//Instance variabler skal være private
 	
+	private static final int ExtraTurn = 10;
 	private Dice die = new Dice();			// Laver et nyt objekt af klassen Dice
 	private int roll1 = 0;	 				// Laver to lokale variable, der indeholder to separate værdier
 	private int roll2 = 0;					// af die.roll();
@@ -38,8 +39,10 @@ public class Controller {
 				roll1 = die.roll();														// Sætter roll1 og roll2 lig die.roll(), men på hver sin linie, så de får hver sin værdi
 				roll2 = die.roll();
 				diceEyes = roll1 + roll2;												// Initialiserer diceEyes til roll1 + roll2
-				//tempPlayer.fieldnumber(diceEyes);//  ---*Dette skal bruges til metoden fields*---
+				//tempPlayer.fieldnumber(diceEyes);//  ---*Dette skal bruges til klassen fields og er et eksempel*---
+				
 				extraturn();													
+				WinCondition();
 			
 					if(win) 
 					{															// Hvis win er true, stopper den while loopet
@@ -62,13 +65,21 @@ public class Controller {
 		
 		scan.close();
 		}
-		public void extraturn()
+		public void extraTurn()
 		{
-			if (diceEyes == 10) 
+			if (diceEyes == ExtraTurn) 
 			{
 				currentPlayer--;
 			}
 		}
+		public void WinCondition() 
+		{
+			if (tempPlayer.points () >= 3000) //Dette er bare et eksempel, metoden skal tilpasses efter klassen konto//
+			{
+				win = true;
+			}
+		}
+
 }
 
 		
