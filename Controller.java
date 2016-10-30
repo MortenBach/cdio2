@@ -18,8 +18,6 @@ public class Controller {
 	private List<Player> Players = new ArrayList<Player>(); 			// Laver en Arrayliste, der kan indeholde referencer til  objekter af  Player																	
 	private Player tempPlayer;
 
-	private int currentAccount = 0;
-	private List<Account> Accounts = new ArrayList<Account>();
 	private Account tempAccount;
 
 	private Fields result = new Fields();
@@ -67,7 +65,6 @@ public class Controller {
 				scan.nextLine();
 
 				currentPlayer++;
-				currentAccount++;
 			}
 
 			if (currentPlayer == Players.size()) { 										// if-statement, der resetter i når den bliver lig længden af Players listen
