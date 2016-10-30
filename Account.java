@@ -2,7 +2,7 @@
 
 public class Account {
 	
-	private int points;
+	private int points = 1000;
 	
 	public Account() {
 	}
