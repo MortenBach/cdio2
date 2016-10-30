@@ -22,7 +22,7 @@ public class Fields {
 			return -20;
 
 		case 6:
-			return 100;
+			return 180;
 
 		case 7:
 			return 0;
