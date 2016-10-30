@@ -32,7 +32,7 @@ public class Controller {
 		Players.add(new Player("Player 2"));
 		
 	}
-
+	
 	public void game() {
 		Scanner scan = new Scanner(System.in); 															// Laver en scanner
 
@@ -55,6 +55,7 @@ public class Controller {
 
 				result.printstory(diceEyes);
 				tempAccount.setPoints(result.assignvalue(diceEyes));
+				avoidNegative();
 				WinCondition();
 
 				if (win) { // Hvis win er true, stopper den while loopet
@@ -89,6 +90,12 @@ public class Controller {
 			System.out.println(tempPlayer + " has won the game.");
 			win = true;
 		}
+	}
+	
+	public void avoidNegative() {
+		if (tempAccount.getPoints() <= 0)
+			tempAccount.setPoints(0);
+	
 	}
 
 }
