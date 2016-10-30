@@ -30,9 +30,7 @@ public class Controller {
 																										
 		Players.add(new Player("Player 1")); 															// Tilføjer spillere til listen Players																										
 		Players.add(new Player("Player 2"));
-
-		Accounts.add(new Account());
-		Accounts.add(new Account());
+		
 	}
 
 	public void game() {

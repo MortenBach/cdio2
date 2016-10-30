@@ -88,7 +88,7 @@ public class Fields {
 			break;
 
 		case 11:
-			System.out.println("You've fallen into a pit during a hike in the fores and no-one is there to help you get out. It starts raining. -50 credit.");
+			System.out.println("You've fallen into a pit during a walk in the woods and no-one is there to help you get out. It starts raining. -50 credit.");
 			break;
 
 		case 12:
