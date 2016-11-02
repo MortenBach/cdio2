@@ -1,5 +1,4 @@
 
-
 public class Account {
 	
 	private int points = 1000;

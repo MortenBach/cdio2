@@ -1,34 +1,39 @@
 
-
-public class Player {
+public class Player 
+{
 	
 	private String name;
 	private Account account;
 	
-	public Player(String name) {
+	public Player(String name) 
+	{
 		this.name = name;
 		account = new Account();
 	}
 
-	public Account getAccount() {
-		return account;
+	public void setPoints(int value)
+	{
+		this.account.setPoints(value);
+	}
+	
+	public int getPoints()
+	{
+		return this.account.getPoints();
 	}
 
-	public void setAccount(Account tempAccount) {
-		account = tempAccount;
-	}
-
-	public String getName() {
+	public String getName() 
+	{
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(String name) 
+	{
 		this.name = name;
 	}
 	
-	public String toString() {
+	public String toString() 
+	{
 		
 		return name;
-		
 	}
 }
