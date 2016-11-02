@@ -4,24 +4,21 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class TestNegative {
-	private int diceEyes;
 	private Player testPlayer;
 	private Account testAccount;
-	private Fields result = new Fields();
+	private int field1;
 	public TestNegative() {
 		testPlayer = new Player("testPlayer");
 	}
 
 	@Test
-	public void game() {
+	public void testgame() {
 
 		for (int i = 0; i < 20; i++) {
-
+			field1 = (int) ((Math.random()*(-10000))-1);
 			testAccount = testPlayer.getAccount();
-			diceEyes = 3;
-			System.out.println(testPlayer + " has rolled " + diceEyes + "");
-			result.printstory(diceEyes);
-			testAccount.setPoints(result.assignvalue(diceEyes));
+			System.out.println("Attempted to withdraw " + field1 + "credit.");
+			testAccount.setPoints(field1);
 			avoidNegative();
 			System.out.println(testPlayer + " now has " + testAccount.getPoints() + " credit. ");
 			assertTrue(testAccount.getPoints() >= 0);
@@ -29,7 +26,6 @@ public class TestNegative {
 		}
 
 	}
-
 	public void avoidNegative() {
 		if (testAccount.getPoints() <= 0)
 			testAccount.setZero();
