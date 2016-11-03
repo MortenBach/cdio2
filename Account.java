@@ -1,6 +1,6 @@
 
-public class Account {
-	
+public class Account 
+{
 	private int points = 1000;
 	
 	public Account() 
