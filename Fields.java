@@ -1,11 +1,13 @@
+public class Fields 
+{
 
-public class Fields {
-
-	public Fields() {
+	public Fields() 
+	{
 
 	}
 
-	public int assignvalue(int x) {
+	public int assignvalue(int x) 
+	{
 
 		switch (x) {
 
@@ -47,9 +49,11 @@ public class Fields {
 
 	}
 
-	public void printstory(int x) {
+	public void printstory(int x) 
+	{
 
-		switch (x) {
+		switch (x) 
+		{
 
 		case 2:
 			System.out.println("The elevator is broken. You climb the stairs to get to the top of the tower. +250 credit for determination.");
@@ -94,9 +98,6 @@ public class Fields {
 		case 12:
 			System.out.println("You've discovered a goldmine. You're finally rich! +650 credit.");
 			break;
-
 		}
-
 	}
-
 }
