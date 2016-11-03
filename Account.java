@@ -6,7 +6,7 @@ public class Account {
 	// the class constructor is empty
 	public Account() { 
 	}
-	
+
 	
 	//getPoints() returns the value of points.
 	public int getPoints() {

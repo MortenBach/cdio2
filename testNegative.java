@@ -14,7 +14,6 @@ public class testNegative {
 
 		for (int i = 0; i < 20; i++) { //Loops makes certain that the score will eventually go below 0. 
 			field1 = (int) ((Math.random()*(-10000))-1); //The variable field1 will be a random number between -1 and -10000. 
-			testPlayer = testPlayer.getPlayer(); //The reference testPlayer will receive the current amount of points.
 			System.out.println("Attempted to withdraw " + field1 + "credit."); 
 			testPlayer.setPoints(field1); //the amount of points get added equal to the amount of field.
 			avoidNegative(); //checks if the amount of points is below 0, and if this is true, it will adjust the points to be 0 instead.
