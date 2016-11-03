@@ -1,4 +1,3 @@
-
 public class Player 
 {
 	
@@ -19,6 +18,11 @@ public class Player
 	public int getPoints()
 	{
 		return this.account.getPoints();
+	}
+	public void setZero() 
+	{
+		
+		this.account.setZero();
 	}
 
 	public String getName() 
