@@ -14,34 +14,30 @@ public class Player
 									// object of Player is created, the object creates a new object of Account. This means, that each Player object holds an Account object.
 	}
 	
-	//setPoints(int value) makes it easier to assign values to the Player's account.
-	//This makes it possible to call Player.setPoints() instead of Player.getAccount().setPoints(), making the overall code more direct.
+	//setPoints, getPoints and setZero are all duplicates of the Account's class methods.
+	//Creating these methods in the Player class makes it easier to set/get information to/from the Player's account.
+	//e.g. this makes it possible to call Player.setPoints instead of Player.getAccount.setPoints, making the overall code more direct in terms of the Low Coupling principle.
+	
+	//setPoints(int value) assigns a value to the Player's account.
 	public void setPoints(int value)	
 	{
-		this.account.setPoints(value);	// the Account reference "account" calls upon it's class method setPoints(). (see class Account, line 17)
+		this.account.setPoints(value);	// the Account reference "account" calls upon its class method setPoints(). (see class Account, line 17)
 	}
 	
-	//
+	//getPoints() gets the Player's current account balance.
 	public int getPoints()
 	{
-		return this.account.getPoints();
+		return this.account.getPoints(); // the Account reference "account" calls upon its class method getPoints(). (see class Account, line 12)
 	}
+	
+	//setZero() resets the Player's account balance.
 	public void setZero() 
 	{
 		
-		this.account.setZero();
-	}
-
-	public String getName() 
-	{
-		return name;
-	}
-
-	public void setName(String name) 
-	{
-		this.name = name;
+		this.account.setZero(); // the Account reference "account" calls upon it's class method setZero(). (see class Account, line 23)
 	}
 	
+	// toString() returns the name of the Player.
 	public String toString() 
 	{
 		
