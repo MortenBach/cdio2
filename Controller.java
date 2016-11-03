@@ -95,8 +95,9 @@ public class Controller {
 	
 	public void avoidNegative() {
 		if (tempPlayer.getPoints() <= 0)
-			tempPlayer.setPoints(0);
+			tempPlayer.setZero();
 	
 	}
+
 
 }
