@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Controller {
+public class Controller 
+{
 
 	// Instance variabler skal være private
 
@@ -20,24 +21,28 @@ public class Controller {
 	private List<Player> Players = new ArrayList<Player>(); 			// Laver en Arrayliste, der kan indeholde referencer til  objekter af  Player																	
 	private Player tempPlayer;
 
+	
 
 
 	private Fields result = new Fields();
 
 	private boolean win = false;
 
-	public Controller() { 																				// Laver et objekt af klassen Player og s�tter Player 1/2 ind som string i konstrukt�ren
+	public Controller() 
+	{ 																				// Laver et objekt af klassen Player og s�tter Player 1/2 ind som string i konstrukt�ren
 																										
 		Players.add(new Player("Player 1")); 															// Tilf�jer spillere til listen Players																										
-		Players.add(new Player("Player 2"));
-		
+		Players.add(new Player("Player 2"));	
 	}
 	
-	public void game() {
+	public void game() 
+	{
 		Scanner scan = new Scanner(System.in); 															// Laver en scanner
 
-		while (!win) { 																					// Laver en while løkke, der k�rer indtil win = true.
-			if (currentPlayer < Players.size()) { 														// Laver et if-statement til
+		while (!win) 
+		{ 																					// Laver en while løkke, der k�rer indtil win = true.
+			if (currentPlayer < Players.size()) 
+			{ 														// Laver et if-statement til
 																										// index i, i arraylisten Players
 																										
 				tempPlayer = Players.get(currentPlayer); 												// Laver en reference til klassen Player, vi kalder for tempPlayer. tempPlayer refererer til arrayListen Players
@@ -60,7 +65,8 @@ public class Controller {
 				avoidNegative();
 				WinCondition();
 
-				if (win) { // Hvis win er true, stopper den while loopet
+				if (win)
+				{ // Hvis win er true, stopper den while loopet
 					break;
 				}
 
@@ -71,7 +77,8 @@ public class Controller {
 				currentPlayer++;
 			}
 
-			if (currentPlayer == Players.size()) { 										// if-statement, der resetter i når den bliver lig længden af Players listen
+			if (currentPlayer == Players.size()) 
+			{ 										// if-statement, der resetter i når den bliver lig længden af Players listen
 				currentPlayer = 0;
 			}
 		}
@@ -79,13 +86,16 @@ public class Controller {
 		scan.close();
 	}
 
-	public void extraTurn() {
-		if (diceEyes == fieldNumber10) {
+	public void extraTurn() 
+	{
+		if (diceEyes == fieldNumber10) 
+		{
 			currentPlayer--;
 		}
 	}
 
-	public void WinCondition() {
+	public void WinCondition() 
+	{
 		if (tempPlayer.getPoints() >= winCondition) 												
 		{
 			System.out.println(tempPlayer + " has won the game.");
@@ -93,11 +103,9 @@ public class Controller {
 		}
 	}
 	
-	public void avoidNegative() {
+	public void avoidNegative() 
+	{
 		if (tempPlayer.getPoints() <= 0)
 			tempPlayer.setZero();
-	
 	}
-
-
 }
