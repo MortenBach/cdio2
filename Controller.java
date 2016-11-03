@@ -6,7 +6,7 @@ public class Controller {
 
 	// Instance variabler skal være private
 
-	private static final int fieldNumber9 = 10;
+	private static final int fieldNumber10 = 10;
 	private static final int winCondition  = 3000;
 	
 	private Dice die = new Dice(); 										// Laver et nyt objekt af klassen Dice
@@ -80,7 +80,7 @@ public class Controller {
 	}
 
 	public void extraTurn() {
-		if (diceEyes == fieldNumber9) {
+		if (diceEyes == fieldNumber10) {
 			currentPlayer--;
 		}
 	}
